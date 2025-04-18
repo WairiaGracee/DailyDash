@@ -50,6 +50,11 @@
     
     /* Sidebar */
     .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: calc(100vh - 80px);
+        margin-top: 80px;
         width: 200px;
         background-color: #011649;
         color: white;
@@ -76,6 +81,7 @@
     }
     /* Content area */
     .content {
+        margin-left: 200px;
         flex: 1;
         padding: 2rem;
         background-color: #f9fbfd;
@@ -89,28 +95,50 @@
         display: none;
     }
     .dashboard-widgets {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
     }
     
     .widget {
+        border-radius: 12px;
+    }
+    .wea-time{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .wea-time .p{
+        font-size: 4em;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+    .widget-bar{
+        height: 300px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         background-color: #fff;
         border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        color: #023b86;
     }
-    
     .widget h3 {
         margin-bottom: 1rem;
         color: #002f85;
     }
-    
+    .widget.chart-widget{
+        height: 600px;
+    }
     .bar-chart {
         display: flex;
         align-items: flex-end;
         gap: 10px;
-        height: 150px;
+        height: 400px;
         background: #eef2f7;
         padding: 1rem;
         border-radius: 8px;

@@ -49,17 +49,17 @@
         <main class="content">
             <div class="dashboard-widgets">
                 <!-- Time & Date -->
-                <div class="widget time-widget">
-                    <h3>Current Time</h3>
-                    <p>Friday, April 18</p>
-                    <p>10:30 AM</p>
-                </div>
-            
+                <div class="widget wea-time">
+                    <div class="widget-bar">
+                        <div class="dayTime p"></div>
+                        <div class="clock p"></div>
+                    </div>
+
                 <!-- Weather Snippet -->
-                <div class="widget weather-widget">
-                    <h3>Weather</h3>
-                    <p>🌤️ Partly Cloudy</p>
-                    <p>24°C</p>
+                <div class="widget-bar">
+                    <div class="p">Current Temp:</div>
+                    <div class="p" id="temp"></div>
+                </div>
                 </div>
             
                 <!-- Activity Chart (CSS styled bars) -->
@@ -89,6 +89,7 @@
         <div id="profile" class="section hidden">👤 Profile Section</div>
         </main>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
 
